@@ -93,10 +93,10 @@ function ExamplesNavbar() {
               target="_blank"
               id="navbar-brand"
             >
-              Now Ui Kit
+              sign up 
             </NavbarBrand>
             <UncontrolledTooltip target="#navbar-brand">
-              Designed by Invision. Coded by Creative Tim
+              Create an Account!
             </UncontrolledTooltip>
             <button
               className="navbar-toggler navbar-toggler"
@@ -128,19 +128,7 @@ function ExamplesNavbar() {
                   Have an issue?
                 </NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink
-                  href="https://twitter.com/CreativeTim?ref=creativetim"
-                  target="_blank"
-                  id="twitter-tooltip"
-                >
-                  <i className="fab fa-twitter"></i>
-                  <p className="d-lg-none d-xl-none">Twitter</p>
-                </NavLink>
-                <UncontrolledTooltip target="#twitter-tooltip">
-                  Follow us on Twitter
-                </UncontrolledTooltip>
-              </NavItem>
+              
               <NavItem>
                 <NavLink
                   href="https://www.facebook.com/CreativeTim?ref=creativetim"
@@ -152,6 +140,19 @@ function ExamplesNavbar() {
                 </NavLink>
                 <UncontrolledTooltip target="#facebook-tooltip">
                   Like us on Facebook
+                </UncontrolledTooltip>
+              </NavItem>
+              <NavLink
+                  href="https://twitter.com/CreativeTim?ref=creativetim"
+                  target="_blank"
+                  id="twitter-tooltip"
+                >
+                  <i className="fab fa-twitter"></i>
+                  <p className="d-lg-none d-xl-none">Twitter</p>
+                  </NavLink>
+                <NavItem>             
+                  <UncontrolledTooltip target="#twitter-tooltip">
+                  Follow us on Twitter
                 </UncontrolledTooltip>
               </NavItem>
               <NavItem>
