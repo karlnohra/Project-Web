@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // reactstrap components
 import {
@@ -95,7 +96,9 @@ function LoginPage() {
                       className="btn-round"
                       color="info"
                       href="#pablo"
-                      onClick={(e) => e.preventDefault()}
+                      // onClick={(e) => e.preventDefault()}
+                      to="/index" 
+                      tag={Link}
                       size="lg"
                     >
                       Get Started
