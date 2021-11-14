@@ -16,6 +16,7 @@ import {
   Container,
   UncontrolledTooltip,
 } from "reactstrap";
+import SignUp from "views/index-sections/SignUp";
 
 function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
@@ -54,15 +55,15 @@ function IndexNavbar() {
         <Container>
           <div className="navbar-translate">
             <NavbarBrand
-              href="https://demos.creative-tim.com/now-ui-kit-react/#/index?ref=nukr-index-navbar"
+            
+            
+            //  href="https://demos.creative-tim.com/now-ui-kit-react/#/index?ref=nukr-index-navbar"
               target="_blank"
               id="navbar-brand"
             >
-            sign up
+            About us
             </NavbarBrand>
-            <UncontrolledTooltip target="#navbar-brand">
-              Create an Account!
-            </UncontrolledTooltip>
+            
             <button
               className="navbar-toggler navbar-toggler"
               onClick={() => {
@@ -89,12 +90,12 @@ function IndexNavbar() {
                   onClick={(e) => {
                     e.preventDefault();
                     document
-                      .getElementById("download-section")
+                      .getElementById("SignUp-Section")
                       .scrollIntoView();
                   }}
                 >
                   
-                  <p>About us</p>
+                  <p>SignUp</p>
                 </NavLink>
               </NavItem>
               <UncontrolledDropdown nav>

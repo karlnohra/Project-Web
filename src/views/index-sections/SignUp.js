@@ -27,6 +27,7 @@ function SignUp() {
     <>
       <div
         className="section section-signup"
+        id="SignUp-Section"
         style={{
           backgroundImage:
             "url(" + require("assets/img/bg11.jpg").default + ")",

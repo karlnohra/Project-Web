@@ -89,15 +89,13 @@ function ExamplesNavbar() {
           </UncontrolledDropdown>
           <div className="navbar-translate">
             <NavbarBrand
-              href="https://demos.creative-tim.com/now-ui-kit-react/index?ref=nukr-examples-navbar"
+             href="https://demos.creative-tim.com/now-ui-kit-react/index?ref=nukr-examples-navbar"
               target="_blank"
               id="navbar-brand"
             >
-              sign up 
+              About us
             </NavbarBrand>
-            <UncontrolledTooltip target="#navbar-brand">
-              Create an Account!
-            </UncontrolledTooltip>
+           
             <button
               className="navbar-toggler navbar-toggler"
               onClick={() => {
