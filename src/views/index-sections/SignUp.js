@@ -30,7 +30,7 @@ function SignUp() {
         id="SignUp-Section"
         style={{
           backgroundImage:
-            "url(" + require("assets/img/bg11.jpg").default + ")",
+            "url(" + require("assets/img/Signupimage.jpg").default + ")",
           backgroundSize: "cover",
           backgroundPosition: "top center",
           minHeight: "700px",
@@ -48,8 +48,8 @@ function SignUp() {
                     <Button
                       className="btn-neutral btn-icon btn-round"
                       color="facebook"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
+                      href="Pablo"
+                       onClick={(e) => e.preventDefault()}
                     >
                       <i className="fab fa-facebook-square"></i>
                     </Button>
@@ -130,8 +130,10 @@ function SignUp() {
                     className="btn-neutral btn-round"
                     color="info"
                     href="#pablo"
-                    onClick={(e) => e.preventDefault()}
+                    to="/login-page"
+                    // onClick={(e) => e.preventDefault()}
                     size="lg"
+                    tag={Link}
                   >
                     Get Started
                   </Button>
@@ -139,7 +141,7 @@ function SignUp() {
               </Form>
             </Card>
           </Row>
-          <div className="col text-center">
+          {/* <div className="col text-center">
             <Button
               className="btn-round btn-white"
               color="default"
@@ -150,7 +152,7 @@ function SignUp() {
             >
               View Login Page
             </Button>
-          </div>
+          </div> */}
         </Container>
       </div>
     </>

@@ -10,9 +10,9 @@ function Typography() {
     <>
       <div className="section">
         <Container>
-          <h3 className="title">Typography</h3>
+          <h3 className="title">Images</h3>
           <div id="typography">
-            <Row>
+            {/* <Row>
               <Col md="12">
                 <div className="typography-line">
                   <h1>
@@ -124,45 +124,95 @@ function Typography() {
                   </h2>
                 </div>
               </Col>
-            </Row>
-          </div>
+            </Row> */}
+           </div> 
           <div className="space-50"></div>
           <div id="images">
-            <h4>Images</h4>
+            <h4>Outdoor</h4>
             <Row>
-              <Col sm="2">
-                <p className="category">Image</p>
+              <Col sm="4">
+                {/* <p className="category">Image</p> */}
                 <img
                   alt="..."
                   className="rounded"
-                  src={require("assets/img/julie.jpg").default}
+                  src={require("assets/img/images1.jpg").default}
+                  height="150"
+                  width="300"
                 ></img>
               </Col>
-              <Col sm="2">
-                <p className="category">Circle Image</p>
-                <img
-                  alt="..."
-                  className="rounded-circle"
-                  src={require("assets/img/julie.jpg").default}
-                ></img>
-              </Col>
-              <Col sm="2">
-                <p className="category">Raised</p>
+              <Col sm="4">
+                {/* <p className="category">Circle Image</p> */}
                 <img
                   alt="..."
                   className="rounded img-raised"
-                  src={require("assets/img/julie.jpg").default}
+                  src={require("assets/img/images2.jpg").default}
+                  height="150"
+                  width="300"
                 ></img>
               </Col>
-              <Col sm="2">
+              <Col sm="4">
+
+                {/* <p className="category">Raised</p> */}
+                <img
+                  alt="..."
+                  className="rounded img-raised"
+                  src={require("assets/img/images3.jpg").default}
+                  height="150"
+                  width="300"
+                ></img>
+              </Col>
+              {/* <Col sm="4">
                 <p className="category">Circle Raised</p>
                 <img
                   alt="..."
                   className="rounded-circle img-raised"
                   src={require("assets/img/julie.jpg").default}
                 ></img>
-              </Col>
+              </Col> */}
             </Row>
+            <h4>Indoor</h4>
+            <Row>
+              <Col sm="4">
+                {/* <p className="category">Image</p> */}
+                <img
+                  alt="..."
+                  className="rounded"
+                  src={require("assets/img/images4.jpg").default}
+                  height="150"
+                  width="300"
+                ></img>
+              </Col>
+              <Col sm="4">
+                {/* <p className="category">Circle Image</p> */}
+                <img
+                  alt="..."
+                  className="rounded img-raised"
+                  src={require("assets/img/images5.jpg").default}
+                  height="150"
+                  width="300"
+                ></img>
+              </Col>
+              <Col sm="4">
+
+                {/* <p className="category">Raised</p> */}
+                <img
+                  alt="..."
+                  className="rounded img-raised"
+                  src={require("assets/img/images7.jpg").default}
+                  height="150"
+                  width="300"
+                ></img>
+              </Col>
+              {/* <Col sm="4">
+                <p className="category">Circle Raised</p>
+                <img
+                  alt="..."
+                  className="rounded-circle img-raised"
+                  src={require("assets/img/julie.jpg").default}
+                ></img>
+              </Col> */}
+            </Row>
+
           </div>
         </Container>
       </div>

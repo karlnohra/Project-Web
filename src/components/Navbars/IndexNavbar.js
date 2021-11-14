@@ -1,14 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 // reactstrap components
 import {
   Button,
   Collapse,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
-  NavbarBrand,
+
   Navbar,
   NavItem,
   NavLink,
@@ -16,7 +12,7 @@ import {
   Container,
   UncontrolledTooltip,
 } from "reactstrap";
-import SignUp from "views/index-sections/SignUp";
+// import SignUp from "views/index-sections/SignUp";
 
 function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
@@ -54,15 +50,32 @@ function IndexNavbar() {
       <Navbar className={"fixed-top " + navbarColor} expand="lg" color="info">
         <Container>
           <div className="navbar-translate">
-            <NavbarBrand
+         
+                <NavLink
+                  href="#pablo"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("About-us")
+                      .scrollIntoView();
+                  }}
+                >
+                  
+                  <p>About us</p>
+                </NavLink>
+                
+            {/* <NavbarBrand
             
             
-            //  href="https://demos.creative-tim.com/now-ui-kit-react/#/index?ref=nukr-index-navbar"
+
+            
+            
+              href="https://demos.creative-tim.com/now-ui-kit-react/#/index?ref=nukr-index-navbar"
               target="_blank"
               id="navbar-brand"
             >
             About us
-            </NavbarBrand>
+            </NavbarBrand> */}
             
             <button
               className="navbar-toggler navbar-toggler"
@@ -98,7 +111,23 @@ function IndexNavbar() {
                   <p>SignUp</p>
                 </NavLink>
               </NavItem>
-              <UncontrolledDropdown nav>
+            
+              <NavItem>
+                <NavLink
+                  href="#pablo"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("images")
+                      .scrollIntoView();
+                  }}
+                >
+                  
+                  <p>Book Your Stay</p>
+                </NavLink>
+              </NavItem>
+
+              {/* <UncontrolledDropdown nav>
                 <DropdownToggle
                   caret
                   color="default"
@@ -110,23 +139,50 @@ function IndexNavbar() {
                   <p>Book Your Stay</p>
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem to="/index" tag={Link}>
-                    {/* <i className="now-ui-icons business_chart-pie-36 mr-1"></i> */}
-                    Available Rooms
-                  </DropdownItem>
-                  <DropdownItem
+                <NavLink
+                 href="#pablo"
+                 onClick={(e) => {
+                   e.preventDefault();
+                   document
+                     .getElementById("images")
+                     .scrollIntoView();
+                 }}
+               >
+                  
+                  
+                  </NavLink> */}
+                  {/* <DropdownItem
                     href="https://demos.creative-tim.com/now-ui-kit-react/#/documentation/introduction?ref=nukr-index-navbar"
                     target="_blank"
                   >
                     <i className="now-ui-icons design_bullet-list-67 mr-1"></i>
                     Documentation
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+                  </DropdownItem> */}
+                {/* </DropdownMenu>
+              </UncontrolledDropdown> */}
               <NavItem>
+              {/* <NavLink
+                  href="#pablo"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("SignUp-Section")
+                      .scrollIntoView();
+                  }}
+                >
+                  
+                  
+                </NavLink> */}
                 <Button
                   className="nav-link btn-neutral"
                   color="info"
+                  href="#pablo"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("typography")
+                      .scrollIntoView();
+                  }}
                   // href="https://www.creative-tim.com/product/now-ui-kit-pro-react?ref=nukr-index-navbar"
                   id="upgrade-to-pro"
                   target="_blank"
@@ -138,7 +194,7 @@ function IndexNavbar() {
                   Cooming soon!
                 </UncontrolledTooltip>
               </NavItem>
-              <NavItem>
+              {/* <NavItem>
                 <NavLink
                   // href="https://twitter.com/CreativeTim?ref=creativetim"
                   target="_blank"
@@ -150,10 +206,10 @@ function IndexNavbar() {
                 <UncontrolledTooltip target="#twitter-tooltip">
                   Follow us on Twitter
                 </UncontrolledTooltip>
-              </NavItem>
+              </NavItem> */}
               <NavItem>
                 <NavLink
-                  // href="https://www.facebook.com/CreativeTim?ref=creativetim"
+                   href="https://www.facebook.com/groups/550435406232262"
                   target="_blank"
                   id="facebook-tooltip"
                 >
@@ -166,7 +222,7 @@ function IndexNavbar() {
               </NavItem>
               <NavItem>
                 <NavLink
-                  // href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
+                  href="https://www.instagram.com/whitelaguna1/"
                   target="_blank"
                   id="instagram-tooltip"
                 >

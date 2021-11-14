@@ -4,7 +4,7 @@ import React from "react";
 import {
   Button,
   Card,
-  CardHeader,
+
   CardBody,
   CardFooter,
   Form,
@@ -18,7 +18,7 @@ import {
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import TransparentFooter from "components/Footers/TransparentFooter.js";
+
 
 function LoginPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
@@ -37,12 +37,12 @@ function LoginPage() {
   return (
     <>
       <ExamplesNavbar />
-      <div className="page-header clear-filter" filter-color="blue">
+      <div className="page-header clear-filter" >
         <div
           className="page-header-image"
           style={{
             backgroundImage:
-              "url(" + require("assets/img/login.jpg").default + ")",
+              "url(" + require("assets/img/LoginPage.jpg").default + ")",
           }}
         ></div>
         <div className="content">
@@ -50,14 +50,7 @@ function LoginPage() {
             <Col className="ml-auto mr-auto" md="4">
               <Card className="card-login card-plain">
                 <Form action="" className="form" method="">
-                  <CardHeader className="text-center">
-                    <div className="logo-container">
-                      <img
-                        alt="..."
-                        src={require("assets/img/now-logo.png").default}
-                      ></img>
-                    </div>
-                  </CardHeader>
+                  
                   <CardBody>
                     <InputGroup
                       className={
@@ -107,7 +100,7 @@ function LoginPage() {
                     >
                       Get Started
                     </Button>
-                    <div className="pull-left">
+                    {/* <div className="pull-left">
                       <h6>
                         <a
                           className="link"
@@ -117,8 +110,8 @@ function LoginPage() {
                           Create Account
                         </a>
                       </h6>
-                    </div>
-                    <div className="pull-right">
+                    </div> */}
+                    {/* <div className="pull-right">
                       <h6>
                         <a
                           className="link"
@@ -128,14 +121,14 @@ function LoginPage() {
                           Need Help?
                         </a>
                       </h6>
-                    </div>
+                    </div> */}
                   </CardFooter>
                 </Form>
               </Card>
             </Col>
           </Container>
         </div>
-        <TransparentFooter />
+        
       </div>
     </>
   );
