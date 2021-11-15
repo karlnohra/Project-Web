@@ -124,9 +124,9 @@ function Tabs() {
                       <p >Call us on:</p> 
                       </Col>
                       <Col sm="10">
-                      <p>Karl nohra: 71 548 301</p>
-                      <p>Samer Chahine: 03 836 246</p>
-                      <p>Roudy Hneine: 76 319 631</p>
+                      <p>Karl nohra: +961 71 548 301</p>
+                      <p>Samer Chahine: +961 03 836 246</p>
+                      <p>Roudy Hneine: +961 76 319 631</p>
                       </Col>
                                     
                       
