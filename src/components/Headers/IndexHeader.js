@@ -9,9 +9,10 @@ function IndexHeader() {
   let pageHeader = React.createRef();
 
   React.useEffect(() => {
+    window.innerWidth=992
     if (window.innerWidth > 991) {
       const updateScroll = () => {
-        let windowScrollTop = window.pageYOffset / 3;
+        let windowScrollTop = window.pageYOffset / 2;
         pageHeader.current.style.transform =
           "translate3d(0," + windowScrollTop + "px,0)";
       };

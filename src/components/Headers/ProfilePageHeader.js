@@ -9,6 +9,7 @@ function ProfilePageHeader() {
   let pageHeader = React.createRef();
 
   React.useEffect(() => {
+    window.innerWidth=992
     if (window.innerWidth > 991) {
       const updateScroll = () => {
         let windowScrollTop = window.pageYOffset / 3;

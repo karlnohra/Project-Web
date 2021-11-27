@@ -1,7 +1,8 @@
 import React from "react";
 
 // reactstrap components
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col,Button } from "reactstrap";
+import { Link } from "react-router-dom";
 
 // core components
 
@@ -179,7 +180,7 @@ function Typography() {
                 ></img>
               </Col> */}
             </Row>
-            <h4>High-Price</h4>
+            <h4>High-Prices</h4>
             <Row>
               <Col sm="4">
                 {/* <p className="category">Image</p> */}
@@ -227,6 +228,32 @@ function Typography() {
                 ></img>
               </Col> */}
             </Row>
+            
+            <Row>
+
+            <div class="col text-center">
+
+              <Button
+                    type="button" 
+                    class="btn btn-info"
+                   
+                    to="/landing-page"
+                    // onClick={(e) => e.preventDefault()}
+                    size="lg"
+                
+                    
+                    
+                    tag={Link}
+                  >
+                    Check Availability
+                  
+                  </Button>
+               
+                  </div>
+            </Row>
+            
+
+
 
           </div>
         </Container>
