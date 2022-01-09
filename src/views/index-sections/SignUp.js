@@ -20,9 +20,34 @@ import {
 // core components
 
 function SignUp() {
+  
+
+
+ 
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
+  const [fname,setFName] = React.useState('')
+  const [lname,setLName] = React.useState('')
+  const [email,setEmail] = React.useState('')
+  async function handleSubmit(event){
+    event.preventDefault()
+    
+
+    const exercise={
+      firstname:" ",
+      lastname:" ",
+      Email:" "
+
+
+    }
+    console.log(exercise)
+    
+  }
+
+
+
+ 
   return (
     <>
       <div
@@ -84,10 +109,13 @@ function SignUp() {
                       </InputGroupText>
                     </InputGroupAddon>
                     <Input
+
                       placeholder="First Name..."
                       type="text"
                       onFocus={() => setFirstFocus(true)}
                       onBlur={() => setFirstFocus(false)}
+                      onChange = {e => setFName(e.target.value)}
+                      value = {fname}
                     ></Input>
                   </InputGroup>
                   <InputGroup
@@ -103,8 +131,10 @@ function SignUp() {
                     <Input
                       placeholder="Last Name..."
                       type="text"
+                      onChange = {e => setLName(e.target.value)}
                       onFocus={() => setLastFocus(true)}
                       onBlur={() => setLastFocus(false)}
+                      value = {lname}
                     ></Input>
                   </InputGroup>
                   <InputGroup
@@ -120,8 +150,10 @@ function SignUp() {
                     <Input
                       placeholder="Email..."
                       type="text"
+                      onChange = {e => setEmail(e.target.value)}
                       onFocus={() => setEmailFocus(true)}
                       onBlur={() => setEmailFocus(false)}
+                      value = {email}                                 
                     ></Input>
                   </InputGroup>
                 </CardBody>
@@ -130,12 +162,23 @@ function SignUp() {
                     className="btn-neutral btn-round"
                     color="info"
                     href="#pablo"
+                    // to="/login-page"
+                    onClick={handleSubmit}
+                    size="lg"
+                    // tag={Link}
+                  >
+                    Get Started
+                  </Button>
+                  <Button
+                    className="btn-neutral btn-round"
+                    color="info"
+                    href="#pablo"
                     to="/login-page"
-                    // onClick={(e) => e.preventDefault()}
+                    
                     size="lg"
                     tag={Link}
                   >
-                    Get Started
+                    Already have a account?
                   </Button>
                 </CardFooter>
               </Form>
@@ -159,4 +202,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default SignUp
