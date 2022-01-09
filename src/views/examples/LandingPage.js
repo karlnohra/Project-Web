@@ -1,12 +1,17 @@
 import React from "react";
+import  { useState } from 'react';
+import Calendar from 'react-calendar';
+
+
+
+
+
+
 
 // reactstrap components
 import {
   Button,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
+  
   Container,
   Row,
   Col,
@@ -15,11 +20,35 @@ import {
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
-import DefaultFooter from "components/Footers/DefaultFooter.js";
+import NumericInput from 'react-numeric-input';
+import { Link } from "react-router-dom";
+
+
+
+
+
+
 
 function LandingPage() {
-  const [firstFocus, setFirstFocus] = React.useState(false);
-  const [lastFocus, setLastFocus] = React.useState(false);
+ 
+    
+
+  
+   
+  
+ 
+  const [isCalendarTrue, setIsCalendarTrue] = React.useState(false);
+
+  const [value, onChange] = useState(new Date());
+
+  
+
+
+  
+  
+   
+ 
+
   React.useEffect(() => {
     document.body.classList.add("landing-page");
     document.body.classList.add("sidebar-collapse");
@@ -39,18 +68,710 @@ function LandingPage() {
         <div className="section section-about-us">
           <Container>
             <Row>
+              <h2><b> Opening Hours For Reservation</b></h2>
+              </Row>
+            <Row>
+              <Col >
+              <p style={{color :'darkblue'}}><mark>-Monday till Friday: 8am-8pm</mark></p>
+              <p style={{color:"darkblue"}}><mark>-Weekends: 8am-5pm</mark></p>
+              </Col>
+            </Row>
+            <Row>
+            
+              
               <Col className="ml-auto mr-auto text-center" md="8">
-                <h2 className="title">Who we are?</h2>
-                <h5 className="description">
+                <h2 className="title">Current Available Rooms</h2>
+                {/* <h5 className="description">
                   According to the National Oceanic and Atmospheric
                   Administration, Ted, Scambos, NSIDClead scentist, puts the
                   potentially record low maximum sea ice extent tihs year down
                   to low ice extent in the Pacific and a late drop in ice extent
                   in the Barents Sea.
-                </h5>
+                </h5> */}
               </Col>
             </Row>
-            <div className="separator separator-primary"></div>
+           
+             <Row>
+              <Col sm="6">
+              <h5><b>Two double beds with balcony</b> </h5>
+              </Col>
+              
+              <Col sm="6">
+               <h5><b>Two small beds with balcony</b></h5>
+              </Col>
+             </Row>
+            <Row>
+              <Col sm="6">
+
+               <img
+                  alt="..."
+                  className="rounded"
+                  src={require("assets/img/low-price-images1.jpg").default}
+                  height="150"
+                  width="300"
+
+                  
+                ></img>
+              </Col>
+              <Col sm="6">
+              <img
+                  alt="..."
+                  className="rounded"
+                  src={require("assets/img/low-price-images2.jpg").default}
+                  height="150"
+                  width="300"
+
+                  
+                ></img>
+                
+              </Col>
+
+
+            </Row>
+              
+            <Row>
+              <Col sm="6">
+                <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="md"
+                    >
+                    Check-In-Date:
+                  </Button>
+             
+                
+                 {/* <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="lg"
+                    >
+                    Check Availability
+                  </Button> */}
+
+                  <h6>{value.toString()}</h6>
+
+                  {isCalendarTrue && 
+                    <Calendar
+                      onChange={onChange}
+                      value={value}
+                    />
+
+
+                  }
+              </Col>
+              
+              
+               <Col sm="6">
+                  <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="md"
+                    >
+                    Check-In-Date:
+                  </Button>
+             
+                
+                   {/* <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="lg"
+                    >
+                    Check Availability
+                   </Button> */}
+
+                  <h6>{value.toString()}</h6>
+
+                   {isCalendarTrue && 
+                     <Calendar
+                     onChange={onChange}
+                     value={value}
+                      />
+
+
+                    }
+
+                </Col>
+               </Row>
+              <Row>
+                <Col sm="6">
+                   <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="md"
+                    >
+                    Check-Out-Date:
+                   </Button>
+             
+                
+                   {/* <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="lg"
+                    >
+                    Check Availability
+                    </Button> */}
+
+                   <h6>{value.toString()}</h6>
+
+                     {isCalendarTrue && 
+                      <Calendar
+                      onChange={onChange}
+                      value={value}
+                       />
+
+
+                     }
+               </Col>
+                <Col sm="6">
+                  <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="md"
+                    >
+                    Check-Out-Date:
+                  </Button>
+             
+                
+                 {/* <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="lg"
+                    >
+                    Check Availability
+                   </Button> */}
+
+                    <h6>{value.toString()}</h6>
+
+                     {isCalendarTrue && 
+                      <Calendar
+                       onChange={onChange}
+                       value={value}
+                       />
+
+
+                      }
+
+                </Col>
+               </Row>
+               
+                
+                <Row>
+                 <Col sm="3">
+                  <h5><b>Number of Rooms:</b></h5>
+               
+
+                 </Col> 
+                  
+                 <Col sm="3">
+                  <NumericInput min={0} max={4} value={0} />
+              
+                 </Col>
+                 <Col sm="3">
+                  <h5><b>Number of Rooms:</b></h5>
+
+                 </Col>
+                 <Col sm="3">
+                  <NumericInput min={0} max={4} value={0} />
+              
+                 </Col>
+                 </Row>
+                 <Row>
+                   <Col sm="3">
+                   <h5><b>Price: </b></h5>
+                   </Col>
+                   <Col sm="3">
+                   <h5>150$/night  </h5>
+                   </Col>
+                   <Col sm="3">
+                   <h5><b>Price: </b></h5>
+
+                   </Col>
+                   <Col sm="3">
+                   <h5>120$/night  </h5>
+
+                   </Col>
+                   
+                   
+                 </Row>
+                 
+                 <Row>
+                   <Col sm="6">
+                      <p class="text-left" >-----------------------------------------------------------</p>
+                    </Col>
+                    <Col sm="6">
+                    <p class="text-left">-----------------------------------------------------------</p>
+
+                    </Col>
+                 </Row>
+                 <Row>
+                   <h1> </h1>
+                 </Row>
+                 <Row>
+                 <Col sm="6">
+                   <h5><b>Four small beds with balcony</b> </h5>
+                 </Col>
+              
+                 <Col sm="6">
+                  <h5><b>Two double beds with a  small bed and  view </b></h5>
+                  </Col>
+
+                 </Row>
+                 <Row>
+              <Col sm="6">
+
+               <img
+                  alt="..."
+                  className="rounded"
+                  src={require("assets/img/low-price-images3.jpg").default}
+                  height="150"
+                  width="300"
+
+                  
+                ></img>
+              </Col>
+              <Col sm="6">
+              <img
+                  alt="..."
+                  className="rounded"
+                  src={require("assets/img/high-price-images1.jpg").default}
+                  height="150"
+                  width="300"
+
+                  
+                ></img>
+                
+              </Col>
+              </Row>
+              <Row>
+              <Col sm="6">
+                <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="md"
+                    >
+                    Check-In-Date:
+                  </Button>
+             
+                
+                 {/* <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="lg"
+                    >
+                    Check Availability
+                  </Button> */}
+
+                  <h6>{value.toString()}</h6>
+
+                  {isCalendarTrue && 
+                    <Calendar
+                      onChange={onChange}
+                      value={value}
+                    />
+
+
+                  }
+              </Col>
+              
+              
+               <Col sm="6">
+                  <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="md"
+                    >
+                    Check-In-Date:
+                  </Button>
+             
+                
+                   {/* <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="lg"
+                    >
+                    Check Availability
+                   </Button> */}
+
+                  <h6>{value.toString()}</h6>
+
+                   {isCalendarTrue && 
+                     <Calendar
+                     onChange={onChange}
+                     value={value}
+                      />
+
+
+                    }
+
+                </Col>
+               </Row>
+               <Row>
+                <Col sm="6">
+                   <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="md"
+                    >
+                    Check-Out-Date:
+                   </Button>
+             
+                
+                   {/* <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="lg"
+                    >
+                    Check Availability
+                    </Button> */}
+
+                   <h6>{value.toString()}</h6>
+
+                     {isCalendarTrue && 
+                      <Calendar
+                      onChange={onChange}
+                      value={value}
+                       />
+
+
+                     }
+               </Col>
+                <Col sm="6">
+                  <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="md"
+                    >
+                    Check-Out-Date:
+                  </Button>
+             
+                
+                 {/* <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="lg"
+                    >
+                    Check Availability
+                   </Button> */}
+
+                    <h6>{value.toString()}</h6>
+
+                     {isCalendarTrue && 
+                      <Calendar
+                       onChange={onChange}
+                       value={value}
+                       />
+
+
+                      }
+
+                </Col>
+               </Row>
+               <Row>
+                 <Col sm="3">
+                  <h5><b>Number of Rooms:</b></h5>
+               
+
+                 </Col> 
+                  
+                 <Col sm="3">
+                  <NumericInput min={0} max={4} value={0} />
+              
+                 </Col>
+                 <Col sm="3">
+                  <h5><b>Number of Rooms:</b></h5>
+
+                 </Col>
+                 <Col sm="3">
+                  <NumericInput min={0} max={4} value={0} />
+              
+                 </Col>
+                 </Row>
+                 <Row>
+                   <Col sm="3">
+                   <h5><b>Price: </b></h5>
+                   </Col>
+                   <Col sm="3">
+                   <h5>170$/night  </h5>
+                   </Col>
+                   <Col sm="3">
+                   <h5><b>Price: </b></h5>
+
+                   </Col>
+                   <Col sm="3">
+                   <h5>400$/night  </h5>
+
+                   </Col>
+                   
+                   
+                 </Row>
+                  <Row>
+                   <Col sm="6">
+                      <p class="text-left" >-----------------------------------------------------------</p>
+                    </Col>
+                    <Col sm="6">
+                    <p class="text-left">-----------------------------------------------------------</p>
+
+                    </Col>
+                  </Row>
+                  <Row>
+                    <h1>  </h1>
+                  </Row>
+                <Row>
+                  <Col sm="6">
+                    <h5><b>One  big bed with a big balcony</b> </h5>
+                  </Col>
+              
+                  <Col sm="6">
+                    <h5><b>Two small beds with balcony</b></h5>
+                  </Col>
+                </Row>
+                <Row>
+              <Col sm="6">
+
+               <img
+                  alt="..."
+                  className="rounded"
+                  src={require("assets/img/high-price-images2.jpg").default}
+                  height="150"
+                  width="300"
+
+                  
+                ></img>
+              </Col>
+              <Col sm="6">
+              <img
+                  alt="..."
+                  className="rounded"
+                  src={require("assets/img/high-price-images3.jpg").default}
+                  height="150"
+                  width="300"
+
+                  
+                ></img>
+                
+              </Col>
+
+
+            </Row>
+            <Row>
+              <Col sm="6">
+                <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="md"
+                    >
+                    Check-In-Date:
+                  </Button>
+             
+                
+                 {/* <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="lg"
+                    >
+                    Check Availability
+                  </Button> */}
+
+                  <h6>{value.toString()}</h6>
+
+                  {isCalendarTrue && 
+                    <Calendar
+                      onChange={onChange}
+                      value={value}
+                    />
+
+
+                  }
+              </Col>
+              
+              
+               <Col sm="6">
+                  <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="md"
+                    >
+                    Check-In-Date:
+                  </Button>
+             
+                
+                   {/* <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="lg"
+                    >
+                    Check Availability
+                   </Button> */}
+
+                  <h6>{value.toString()}</h6>
+
+                   {isCalendarTrue && 
+                     <Calendar
+                     onChange={onChange}
+                     value={value}
+                      />
+
+
+                    }
+
+                </Col>
+               </Row>
+               <Row>
+                <Col sm="6">
+                   <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="md"
+                    >
+                    Check-Out-Date:
+                   </Button>
+             
+                
+                   {/* <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="lg"
+                    >
+                    Check Availability
+                    </Button> */}
+
+                   <h6>{value.toString()}</h6>
+
+                     {isCalendarTrue && 
+                      <Calendar
+                      onChange={onChange}
+                      value={value}
+                       />
+
+
+                     }
+               </Col>
+                <Col sm="6">
+                  <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="md"
+                    >
+                    Check-Out-Date:
+                  </Button>
+             
+                
+                 {/* <Button
+                    type="button" 
+                    class="btn btn-info"
+                    onClick={() => setIsCalendarTrue(!isCalendarTrue)}
+                    size="lg"
+                    >
+                    Check Availability
+                   </Button> */}
+
+                    <h6>{value.toString()}</h6>
+
+                     {isCalendarTrue && 
+                      <Calendar
+                       onChange={onChange}
+                       value={value}
+                       />
+
+
+                      }
+
+                </Col>
+               </Row>
+               
+                
+                <Row>
+                 <Col sm="3">
+                  <h5><b>Number of Rooms:</b></h5>
+               
+
+                 </Col> 
+                  
+                 <Col sm="3">
+                  <NumericInput min={0} max={4} value={0} />
+              
+                 </Col>
+                 <Col sm="3">
+                  <h5><b>Number of Rooms:</b></h5>
+
+                 </Col>
+                 <Col sm="3">
+                  <NumericInput min={0} max={4} value={0} />
+              
+                 </Col>
+                 </Row>
+                 <Row>
+                   <Col sm="3">
+                   <h5><b>Price: </b></h5>
+                   </Col>
+                   <Col sm="3">
+                   <h5>300$/night  </h5>
+                   </Col>
+                   <Col sm="3">
+                   <h5><b>Price: </b></h5>
+
+                   </Col>
+                   <Col sm="3">
+                   <h5>250$/night  </h5>
+
+                   </Col>
+                </Row>
+
+                <Row>
+                  <h1>  </h1>
+
+                </Row>
+
+                <Row>
+                  <h1>  </h1>
+                </Row>
+                
+                <Row>
+                <Col sm="4">
+                  <h1>   </h1>
+                </Col>
+                  <Col sm="4">
+                <Button
+                      block
+                      className="btn-round"
+                      color="info"
+                      href="#pablo"
+                      // onClick={(e) => e.preventDefault()}
+                      to="/index" 
+                      tag={Link}
+                      size="sm"
+                    >
+                      Submit
+                    </Button>
+                    </Col>
+                
+                </Row>
+              
+
+            {/* <div className="separator separator-primary"></div>
             <div className="section-story-overview">
               <Row>
                 <Col md="6">
@@ -318,10 +1039,10 @@ function LandingPage() {
                   </Button>
                 </div>
               </Col>
-            </Row>
+            </Row> */}
           </Container>
         </div>
-        <DefaultFooter />
+       
       </div>
     </>
   );

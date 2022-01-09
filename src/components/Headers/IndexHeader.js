@@ -45,7 +45,7 @@ function IndexHeader() {
             <h3>Welcome To Your Luxury Home! </h3>
           </div>
           <h6 className="category category-absolute">
-            <i>A Best Place To Relax</i>
+            <big>A Best Place To Relax</big>
             
             
           </h6>

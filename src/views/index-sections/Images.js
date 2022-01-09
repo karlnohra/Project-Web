@@ -136,7 +136,7 @@ function Typography() {
                 {/* <p className="category">Image</p> */}
                 <img
                   alt="..."
-                  className="rounded"
+                  className="rounded img-raised"
                   src={require("assets/img/low-price-images1.jpg").default}
                   height="150"
                   width="300"
@@ -186,7 +186,7 @@ function Typography() {
                 {/* <p className="category">Image</p> */}
                 <img
                   alt="..."
-                  className="rounded"
+                  className="rounded img-raised"
                   src={require("assets/img/high-price-images1.jpg").default}
                   height="150"
                   width="300"
